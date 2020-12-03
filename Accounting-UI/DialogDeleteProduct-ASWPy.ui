@@ -438,7 +438,7 @@
    </palette>
   </property>
   <property name="windowTitle">
-   <string>محصول جدید</string>
+   <string>حذف محصول</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
