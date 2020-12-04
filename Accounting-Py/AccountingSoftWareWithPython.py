@@ -4,8 +4,8 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import *
 
-import DialogCreateFactor-ASWPy as PrintFactor
 import DialogDeleteProduct-ASWPy as DeleteProduct
+import DialogCreateFactor-ASWPy as PrintFactor
 import DialogNewProduct-ASWPy as NewProduct 
 
 
