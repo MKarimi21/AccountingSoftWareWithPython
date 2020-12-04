@@ -2,6 +2,8 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import *
+
 import DialogCreateFactor-ASWPy as PrintFactor
 import DialogDeleteProduct-ASWPy as DeleteProduct
 import DialogNewProduct-ASWPy as NewProduct 
@@ -2947,4 +2949,17 @@ if __name__ == "__main__":
     ui = Ui_Form()
     ui.setupUi(Form)
     Form.show()
+# ======================== Dialog ===========
+# PrintFactor
+# DeleteProduct
+# NewProduct 
+    
+    PF = PrintFactor.Ui_DialogFactorPrint()
+    DialogPF = QtWidgets.QDialog()
+    PF.setupUi(DialogPF)
+    ui.pushButton.clicked.connect(lambda : DialogPF.exec_())
+
+
+
+# ===========================================
     sys.exit(app.exec_())
