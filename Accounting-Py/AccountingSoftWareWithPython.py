@@ -4,9 +4,9 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import *
 
-import DialogDeleteProduct-ASWPy as DeleteProduct
-import DialogCreateFactor-ASWPy as PrintFactor
-import DialogNewProduct-ASWPy as NewProduct 
+import DialogDeleteProductASWPy as DeleteProduct
+import DialogCreateFactorASWPy as PrintFactor
+import DialogNewProductASWPy as NewProduct 
 
 
 class Ui_Form(object):
