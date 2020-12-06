@@ -2971,7 +2971,7 @@ if __name__ == "__main__":
 
     NP = NewProduct.Ui_DialogADD()
     DialogNP = QtWidgets.QDialog()
-    NP.setupUi(DialogDP)
+    NP.setupUi(DialogNP)
     ui.pushButton_2.clicked.connect(lambda : DialogNP.exec_())
 
 # ===========================================
