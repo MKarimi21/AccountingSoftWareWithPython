@@ -2832,6 +2832,29 @@ class Ui_Form(object):
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
+# ============================== Add Priduct in table
+
+    def add_table(self):
+        """
+        add product
+        """
+        self.product = self.comboBox.currentText()
+        self.productCode = self.comboBox.currentIndex() + 152  # 152 is salt
+        
+
+
+
+
+
+
+# ================================================
+
+
+
+
+
+
+
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "نرم افزار حسابداری فروشگاه"))
