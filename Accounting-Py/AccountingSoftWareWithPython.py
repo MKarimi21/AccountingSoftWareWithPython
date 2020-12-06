@@ -2851,10 +2851,10 @@ class Ui_Form(object):
             else:
                 pass
 
-            self.ROW = len(listProduct)
-            self.tableWidget.setItem(self.ROW, 0, QTableWidgetItem(self.productName))
-            self.tableWidget.setItem(self.ROW, 1, QTableWidgetItem(str(self.productCode)))
-            self.tableWidget.setItem(self.ROW, 2, QTableWidgetItem(str(self.productQuantity)))
+        self.ROW = len(listProduct)
+        self.tableWidget.setItem(self.ROW, 0, QTableWidgetItem(self.productName))
+        self.tableWidget.setItem(self.ROW, 1, QTableWidgetItem(str(self.productCode)))
+        self.tableWidget.setItem(self.ROW, 2, QTableWidgetItem(str(self.productQuantity)))
 
 
         
