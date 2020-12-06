@@ -2850,13 +2850,13 @@ class Ui_Form(object):
             else:
                 pass
 
-        self.ROW = len(listProduct)
-        self.tableWidget.setItem(self.ROW, 0, QTableWidgetItem(self.productName))
-        self.tableWidget.setItem(self.ROW, 1, QTableWidgetItem(str(self.productCode)))
-        self.tableWidget.setItem(self.ROW, 2, QTableWidgetItem(str(self.productQuantity)))
+            self.ROW = len(listProduct)
+            self.tableWidget.setItem(self.ROW, 0, QTableWidgetItem(self.productName))
+            self.tableWidget.setItem(self.ROW, 1, QTableWidgetItem(str(self.productCode)))
+            self.tableWidget.setItem(self.ROW, 2, QTableWidgetItem(str(self.productQuantity)))
+
 
         
-
 
 
 
@@ -2977,6 +2977,13 @@ class Ui_Form(object):
         self.pushButton_23.setText(_translate("Form", ":جمع کل"))
         self.pushButton_24.setText(_translate("Form", "پاک کردن لیست"))
 
+
+#======================== Add Product from combolist ===    
+
+        self.pushButton.clicked.connect(lambda : self.add_table())
+
+
+# =====================================================
 
 if __name__ == "__main__":
     import sys
