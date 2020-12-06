@@ -2838,11 +2838,24 @@ class Ui_Form(object):
         """
         add product
         """
-        self.product = self.comboBox.currentText()
+        self.productName = self.comboBox.currentText()
         self.productCode = self.comboBox.currentIndex() + 152  # 152 is salt
+        self.productQuantity = self.comboBox_2.currentText()
+
+        listProduct = []
+        for i in range(12):
+            self.table = self.tableWidget.item(i, 0)
+            if self.table.text() != "":
+                listProduct.append(i)
+            else:
+                pass
+
+        self.ROW = len(listProduct)
+        self.tableWidget.setItem(self.ROW, 0, QTableWidgetItem(self.productName))
+        self.tableWidget.setItem(self.ROW, 1, QTableWidgetItem(str(self.productCode)))
+        self.tableWidget.setItem(self.ROW, 2, QTableWidgetItem(str(self.productQuantity)))
+
         
-
-
 
 
 
