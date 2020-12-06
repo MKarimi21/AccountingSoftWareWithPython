@@ -2950,18 +2950,29 @@ if __name__ == "__main__":
     ui.setupUi(Form)
     Form.show()
 # ======================== Dialog ===========
+
+
 # PrintFactor
-# DeleteProduct
-# NewProduct 
     
     PF = PrintFactor.Ui_DialogFactorPrint()
     DialogPF = QtWidgets.QDialog()
     PF.setupUi(DialogPF)
     ui.pushButton_4.clicked.connect(lambda : DialogPF.exec_())
 
-    
+# DeleteProduct
+
+    DP = DeleteProduct.Ui_DialogDelete()
+    DialogDP = QtWidgets.QDialog()
+    DP.setupUi(DialogDP)
+    ui.pushButton_3.clicked.connect(lambda : DialogDP.exec_())
 
 
+# NewProduct 
+
+    NP = NewProduct.Ui_DialogADD()
+    DialogNP = QtWidgets.QDialog()
+    NP.setupUi(DialogDP)
+    ui.pushButton_2.clicked.connect(lambda : DialogNP.exec_())
 
 # ===========================================
     sys.exit(app.exec_())
