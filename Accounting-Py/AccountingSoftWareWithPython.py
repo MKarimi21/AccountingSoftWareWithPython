@@ -2843,9 +2843,10 @@ class Ui_Form(object):
         self.productQuantity = self.comboBox_2.currentText()
 
         listProduct = []
-        for i in range(12):
+        for i in list(range(12)):
             self.table = self.tableWidget.item(i, 0)
-            if self.table.text() != "":
+            
+            if self.table.text() != '':
                 listProduct.append(i)
             else:
                 pass
