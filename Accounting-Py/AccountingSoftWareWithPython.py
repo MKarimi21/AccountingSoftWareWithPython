@@ -2885,7 +2885,7 @@ class Ui_Form(object):
                 self.W = self.W.text()
 
 
-                if self.L !='' and self.L != None and self.W != '' and self.W = None:
+                if self.L !='' and self.L != None and self.W != '' and self.W != None:
                     self.solve = float(self.W) * float(self.L)
                     self.tableWidget.setItem(self.ROW_5, 5, QTableWidgetItem(str(self.solve)))
 
