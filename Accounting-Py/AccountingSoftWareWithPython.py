@@ -2832,6 +2832,9 @@ class Ui_Form(object):
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
+# =============================== Extra signal
+        self.tableWidget.doubleClicked.connect(lambda : self.double_table())        
+
 # ============================== Add Priduct in table
     productChar = 0
     listProduct = []
@@ -2865,6 +2868,32 @@ class Ui_Form(object):
 
 #================================ Calculate Product amount (value)
 
+    def double_table(self):
+        """
+        solution of value
+        """
+
+        for currentItem in self.tableWidget.selectedItem():
+            self.ROW_5 = currentItem.row()
+            self.COLUMN_5 = currentItem.column()
+
+            if self.COLUMN_5 == 5:
+                self.L = self.tableWidget.item(self.ROW_5, 3)
+                self.W = self.tableWidget.item(self.ROW_5, 4)
+
+                self.L = self.L.text()
+                self.W = self.W.text()
+
+
+                if self.L !='' and self.L != None and self.W != '' and self.W = None:
+                    self.solve = float(self.W) * float(self.L)
+                    self.tableWidget.setItem(self.ROW_5, 5, QTableWidgetItem(str(self.solve)))
+
+                else:
+                    self.tableWidget.setItem(self.ROW_5, 5, QTableWidgetItem("Error"))
+            
+            else:
+                pass
 
 
 
