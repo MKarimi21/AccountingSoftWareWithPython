@@ -2833,7 +2833,8 @@ class Ui_Form(object):
         QtCore.QMetaObject.connectSlotsByName(Form)
 
 # ============================== Add Priduct in table
-
+    productChar = 0
+    listProduct = []
     def add_table(self):
         """
         add product
@@ -2842,25 +2843,24 @@ class Ui_Form(object):
         self.productCode = self.comboBox.currentIndex() + 152  # 152 is salt
         self.productQuantity = self.comboBox_2.currentText()
 
-        listProduct = []
-        for i in list(range(12)):
-            self.table = self.tableWidget.item(i, 0)
-            
-            if self.table.text() != '':
-                listProduct.append(i)
-            else:
-                pass
-
-        self.ROW = len(listProduct)
-        self.tableWidget.setItem(self.ROW, 0, QTableWidgetItem(self.productName))
-        self.tableWidget.setItem(self.ROW, 1, QTableWidgetItem(str(self.productCode)))
-        self.tableWidget.setItem(self.ROW, 2, QTableWidgetItem(str(self.productQuantity)))
-
-
+        # print(self.table.text())
         
+        self.table = self.tableWidget.item(self.productChar, 0)
+        # print(self.listProduct)
 
+        if self.table != 'NoneType' or self.table != None:
+            self.listProduct.append(self.productChar)
+            self.ROW = len(self.listProduct)-1
+            self.tableWidget.setItem(self.ROW, 0, QTableWidgetItem(self.productName))
+            self.tableWidget.setItem(self.ROW, 1, QTableWidgetItem(str(self.productCode)))
+            self.tableWidget.setItem(self.ROW, 2, QTableWidgetItem(str(self.productQuantity)))
+            self.productChar += 1
+            
+        else:
+            pass
 
-
+        # for is extra and delete it in toturial videos 
+        
 # ================================================
 
 
