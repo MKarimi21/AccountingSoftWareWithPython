@@ -2833,7 +2833,8 @@ class Ui_Form(object):
         QtCore.QMetaObject.connectSlotsByName(Form)
 
 # =============================== Extra signal
-        self.tableWidget.doubleClicked.connect(lambda : self.double_table())        
+        self.tableWidget.doubleClicked.connect(lambda : self.double_table())    
+        self.pushButton_24.clicked.connect(lambda : self.tableWidget.clear())    
 
 # ============================== Add Priduct in table
     productChar = 0
