@@ -2833,8 +2833,8 @@ class Ui_Form(object):
         QtCore.QMetaObject.connectSlotsByName(Form)
 
 # =============================== Extra signal
-        self.tableWidget.doubleClicked.connect(lambda : self.double_table())    
-        self.pushButton_24.clicked.connect(lambda : self.tableWidget.clear())    
+        self.tableWidget.doubleClicked.connect(lambda : self.double_table(item))    
+        self.pushButton_24.clicked.connect(lambda : self.table_clear())    
 
 # ============================== Add Priduct in table
     productChar = 0
@@ -2867,38 +2867,58 @@ class Ui_Form(object):
         
 # ================================================
 
+# ============================= clear push butten
+
+    def table_clear(self):
+
+        """
+        clear table
+        """
+        
+        for i in range(12):
+            for j in range(6):
+                self.tableWidget.setItem(i, j, QTableWidgetItem(""))
+             
+    # clear function in table wiget is extra and clear all of table
+
+
+# ==========================================
+
 #================================ Calculate Product amount (value)
 
-    def double_table(self):
+    
+
+    def double_table(self,item):
         """
         solution of value
         """
+        # print(item.column(), item.row())
+        # for currentItem in self.tableWidget.selectedItems():
+        #     print(currentItem)
+        self.ROW_5 = self.tableWidget.currentRow()
+        self.COLUMN_5 = self.tableWidget.currentColumn()
+        # print(self.ROW_5, self.COLUMN_5)
+        if self.COLUMN_5 == 5:
+            self.L = self.tableWidget.item(self.ROW_5, 3)
+            self.W = self.tableWidget.item(self.ROW_5, 4)
 
-        for currentItem in self.tableWidget.selectedItem():
-            self.ROW_5 = currentItem.row()
-            self.COLUMN_5 = currentItem.column()
-
-            if self.COLUMN_5 == 5:
-                self.L = self.tableWidget.item(self.ROW_5, 3)
-                self.W = self.tableWidget.item(self.ROW_5, 4)
-
-                self.L = self.L.text()
-                self.W = self.W.text()
+            self.L = self.L.text()
+            self.W = self.W.text()
 
 
-                if self.L !='' and self.L != None and self.W != '' and self.W != None:
-                    self.solve = float(self.W) * float(self.L)
-                    self.tableWidget.setItem(self.ROW_5, 5, QTableWidgetItem(str(self.solve)))
+            if self.L !='' and self.L != None and self.W != '' and self.W != None:
+                self.solve = float(self.W) * float(self.L)
+                self.tableWidget.setItem(self.ROW_5, 5, QTableWidgetItem(str(self.solve)))
 
-                else:
-                    self.tableWidget.setItem(self.ROW_5, 5, QTableWidgetItem("Error"))
-            
             else:
-                pass
+                self.tableWidget.setItem(self.ROW_5, 5, QTableWidgetItem("Error"))
+        
+        else:
+            pass
 
 
 
-
+                #bug = when duble click empty solution part
 
 #===============================================
 
