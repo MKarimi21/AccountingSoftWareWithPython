@@ -2896,7 +2896,8 @@ class Ui_Form(object):
         for i in range(12):
             self.itemSum = self.tableWidget.item(i, 5)
             if self.itemSum != None and self.itemSum != '':
-                variable += float(self.itemSum)
+                self.itemSum = float(self.itemSum)
+                variable += self.itemSum
         self.lineEdit_4.setText(str(variable))
 
 
