@@ -3104,7 +3104,8 @@ if __name__ == "__main__":
     DP.setupUi(DialogDP)
     ui.pushButton_3.clicked.connect(lambda : DialogDP.exec_())
 
-    
+    #*****
+    DP.pushButton.clicked.connect(lambda : ui.checkDelet(DP))
 
 
 # NewProduct 
