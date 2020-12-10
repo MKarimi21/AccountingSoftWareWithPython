@@ -3059,6 +3059,24 @@ class Ui_Form(object):
 
         self.pushButton.clicked.connect(lambda : self.add_table())
 
+# ======================= Add New Product to combolist
+
+    def checkProduct(self, class1_1):
+        """
+        check product and add new product into comboBox
+        """
+        text1, text2 = class1_1.check_line()
+        if text1 != '' and text2 != '':
+            self.comboBox.addItem(str(text1))
+        else:
+            pass
+
+
+
+
+# =====================================================
+
+
 
 # =====================================================
 
@@ -3095,7 +3113,7 @@ if __name__ == "__main__":
     ui.pushButton_2.clicked.connect(lambda : DialogNP.exec_())
     
     #*****
-    NP.pushButton.clicked.connect(lambda : ui.checkProduct())
+    NP.pushButton.clicked.connect(lambda : ui.checkProduct(NP))
     # NP.pushButton.clicked.connect(lambda : NP.check_line())
 
 # ===========================================
