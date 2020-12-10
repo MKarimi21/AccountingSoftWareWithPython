@@ -630,6 +630,24 @@ class Ui_DialogDelete(object):
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
+    # ======================== check line
+
+    def check_line(self):
+        """
+        check line to empty or not
+        """      
+        self.text1 = self.lineEdit.text()
+        self.text2 = self.lineEdit_2.text()
+
+        if self.text1 != '' and self.text2 != '':
+           return (self.text1, self.text2)
+        else:
+            return ("Noting", "Noting")
+
+    # ====================================
+
+
+
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "حذف محصول"))
