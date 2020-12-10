@@ -3115,6 +3115,6 @@ if __name__ == "__main__":
     #*****
     NP.pushButton.clicked.connect(lambda : ui.checkProduct(NP))
     # NP.pushButton.clicked.connect(lambda : NP.check_line())
-
+    NP.pushButton.clicked.connect(lambda : DialogNP.close())
 # ===========================================
     sys.exit(app.exec_())
