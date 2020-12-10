@@ -3115,7 +3115,7 @@ if __name__ == "__main__":
     ui.pushButton_3.clicked.connect(lambda : DialogDP.exec_())
 
     #*****
-    DP.pushButton.clicked.connect(lambda : ui.checkDelet(DP))
+    DP.pushButton.clicked.connect(lambda : ui.checkDelete(DP))
     DP.pushButton.clicked.connect(lambda : DialogDP.close())
 
 
