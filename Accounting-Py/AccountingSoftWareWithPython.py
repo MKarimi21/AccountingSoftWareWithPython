@@ -3071,11 +3071,21 @@ class Ui_Form(object):
         else:
             pass
 
+# =====================================================
+
+# ===================== Delete New Product
+
+    def checkDelete(self, class1_1):
+        """
+        delete new product by code of product
+        """
+        
+        text1, text2 = class1_1.check_line()
+        self.comboBox.removeItem(int(text2))
 
 
 
 # =====================================================
-
 
 
 # =====================================================
@@ -3106,6 +3116,7 @@ if __name__ == "__main__":
 
     #*****
     DP.pushButton.clicked.connect(lambda : ui.checkDelet(DP))
+    DP.pushButton.clicked.connect(lambda : DialogDP.close())
 
 
 # NewProduct 
