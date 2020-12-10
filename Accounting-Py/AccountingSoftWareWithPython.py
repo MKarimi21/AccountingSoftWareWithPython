@@ -2835,6 +2835,7 @@ class Ui_Form(object):
 # =============================== Extra signal
         self.tableWidget.doubleClicked.connect(lambda : self.double_table(item))    
         self.pushButton_24.clicked.connect(lambda : self.table_clear())    
+        self.pushButton_23.clicked.connect(lambda : self.total_sum())
 
 # ============================== Add Priduct in table
     productChar = 0
@@ -2886,6 +2887,17 @@ class Ui_Form(object):
 
 # =============================== Total Sum Function
 
+    def total_sum(self):
+        """
+        total sum for product
+        """
+
+        variable = 0
+        for i in range(12):
+            self.itemSum = self.tableWidget.item(i, 5)
+            if self.itemSum.text() != None and self.itemSum.text() != '':
+                variable += float(self.itemSum.text())
+        self.lineEdit_4.setText(str(variable))
 
 
 
