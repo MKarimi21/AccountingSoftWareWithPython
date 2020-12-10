@@ -629,6 +629,14 @@ class Ui_DialogADD(object):
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
+
+    # ======================== check line
+
+        
+
+
+    # ====================================
+
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "محصول جدید"))
