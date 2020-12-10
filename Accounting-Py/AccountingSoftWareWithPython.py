@@ -3093,6 +3093,10 @@ if __name__ == "__main__":
     DialogNP = QtWidgets.QDialog()
     NP.setupUi(DialogNP)
     ui.pushButton_2.clicked.connect(lambda : DialogNP.exec_())
+    
+    #*****
+    NP.pushButton.clicked.connect(lambda : ui.checkProduct())
+    # NP.pushButton.clicked.connect(lambda : NP.check_line())
 
 # ===========================================
     sys.exit(app.exec_())
