@@ -3089,7 +3089,19 @@ class Ui_Form(object):
 
 # ================= Print Factor
 
+    def print_textEdit(self):
+        """
+        print factor for selling product
+        """
+        PF = PrintFactor.Ui_DialogFactorPrint()
+        DialogPF = QtWidgets.QDialog()
+        PF.setupUi(DialogPF)
 
+        nameFamily = self.lineEdit.text()
+        callNumber = self.lineEdit_2.text()
+
+        PF.textEdit.setText("Name and Family: {0} \n Phone Nomber: {1}\n".format(nameFamily, callNumber))
+        
 
 
 # ======================================================
