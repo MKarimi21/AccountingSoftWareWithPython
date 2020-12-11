@@ -2919,6 +2919,8 @@ class Ui_Form(object):
         self.COLUMN_5 = self.tableWidget.currentColumn()
         # print(self.ROW_5, self.COLUMN_5)
         if self.COLUMN_5 == 5 and self.tableWidget.item(self.ROW_5, 3) != None and self.tableWidget.item(self.ROW_5, 4) != None:
+
+            # and self.tableWidget.item(self.ROW_5, 3) != None and self.tableWidget.item(self.ROW_5, 4) != None
             self.L = self.tableWidget.item(self.ROW_5, 3)
             self.W = self.tableWidget.item(self.ROW_5, 4)
 
