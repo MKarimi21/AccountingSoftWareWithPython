@@ -3100,7 +3100,7 @@ class Ui_Form(object):
         nameFamily = self.lineEdit.text()
         callNumber = self.lineEdit_2.text()
 
-        PF.textEdit.setText("\t\t\t Product Fator\nName and Family: \t{0} \nPhone Nomber: \t{1}\n".format(nameFamily, callNumber))
+        PF.textEdit.setText("\t\t Product Fator\nName and Family: \t{0} \nPhone Nomber: \t{1}\n".format(nameFamily, callNumber))
 
         DialogPF.exec_()
 
