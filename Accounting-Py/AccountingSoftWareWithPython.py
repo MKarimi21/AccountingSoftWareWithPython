@@ -3104,6 +3104,16 @@ class Ui_Form(object):
 
         DialogPF.exec_()
 
+        variable = 0
+
+        for i in range(12):
+            self.tab = self.tableWidget.item(i, 0)
+            if self.tab != ''and self.tab != None:
+                variable += 1
+            else:
+                pass
+        print(variable)
+        # for j in range(variable):
 
 
 
