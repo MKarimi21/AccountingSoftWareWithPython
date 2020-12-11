@@ -3126,8 +3126,10 @@ class Ui_Form(object):
         PF.textEdit.setText("\t\t Product Fator\nName and Family: \t{0} \nPhone Nomber: \t{1}\n\n {2}\n\n sum: {3}".format(nameFamily, callNumber, str(productList), self.sumTotal))
         # PF.textEdit.setText()
 
-
+        PF.pushButton_3.clicked.connect(lambda : DialogPF.close())
+        
         DialogPF.exec_()
+        
 
 
 
@@ -3156,7 +3158,7 @@ if __name__ == "__main__":
 
     #*****
     ui.pushButton_4.clicked.connect(lambda : ui.print_textEdit())
-    PF.pushButton_3.clicked.connect(lambda : DialogPF.close())
+    
 
 # DeleteProduct
 
