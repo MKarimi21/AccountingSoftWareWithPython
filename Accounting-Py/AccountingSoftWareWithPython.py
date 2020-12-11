@@ -3087,6 +3087,13 @@ class Ui_Form(object):
 
 # =====================================================
 
+# ================= Print Factor
+
+
+
+
+# ======================================================
+
 
 # =====================================================
 
@@ -3105,7 +3112,10 @@ if __name__ == "__main__":
     PF = PrintFactor.Ui_DialogFactorPrint()
     DialogPF = QtWidgets.QDialog()
     PF.setupUi(DialogPF)
-    ui.pushButton_4.clicked.connect(lambda : DialogPF.exec_())
+    # ui.pushButton_4.clicked.connect(lambda : DialogPF.exec_())
+
+    #*****
+    ui.pushButton_4.clicked.connect(lambda : ui.print_textEdit())
 
 # DeleteProduct
 
