@@ -3127,7 +3127,12 @@ class Ui_Form(object):
         # PF.textEdit.setText()
 
         PF.pushButton_3.clicked.connect(lambda : DialogPF.close())
-        
+
+        PF.pushButton_2.clicked.connect(lambda : self.writeFile(nameFamily, callNumber))
+        PF.pushButton_2.clicked.connect(lambda : DialogPF.close())
+
+
+
         DialogPF.exec_()
         
 
@@ -3136,6 +3141,19 @@ class Ui_Form(object):
 
 # ======================================================
 
+
+# ====================== Witten Factor
+
+    def writeFile(self, w1, w2):
+        """
+        written factor in txt
+        """
+        file = open("Factor.txt", "w+")
+        file.write("{0}\n{1}\n\tEnd Line".format(w1, w2))
+        file.close()
+
+
+# ===================================================
 
 # =====================================================
 
