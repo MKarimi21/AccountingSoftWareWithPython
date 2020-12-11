@@ -3100,9 +3100,7 @@ class Ui_Form(object):
         nameFamily = self.lineEdit.text()
         callNumber = self.lineEdit_2.text()
 
-        PF.textEdit.setText("\t\t Product Fator\nName and Family: \t{0} \nPhone Nomber: \t{1}\n".format(nameFamily, callNumber))
-
-        DialogPF.exec_()
+        
 
         variable = 0
 
@@ -3112,8 +3110,23 @@ class Ui_Form(object):
                 variable += 1
             else:
                 pass
-        print(variable)
-        # for j in range(variable):
+        # print(variable)
+        
+        productList = []
+        
+        for j in range(variable):
+            for k in range(5):
+                
+                productList.append(self.tableWidget.item(j, k).text())
+
+        # print(productList)
+
+        self.sumTotal= self.lineEdit_4.text()
+
+        PF.textEdit.setText("\t\t Product Fator\nName and Family: \t{0} \nPhone Nomber: \t{1}\n\n {2}\n\n sum: {3}".format(nameFamily, callNumber, str(productList), self.sumTotal))
+        # PF.textEdit.setText()
+        DialogPF.exec_()
+
 
 
 
