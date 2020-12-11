@@ -3149,7 +3149,7 @@ class Ui_Form(object):
         written factor in txt
         """
         file = open("Factor.txt", "w+")
-        file.write("{0}\n{1}\n\tEnd Line".format(w1, w2))
+        file.write("Factor Preview\n\n{0}\n{1}\n\tEnd Line".format(w1, w2))
         file.close()
 
 
